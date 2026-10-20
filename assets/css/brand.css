@@ -1,0 +1,165 @@
+/* AUAG visual identity — adapted only from the supplied gold/silver brand references.
+   The existing layout, routes, interaction logic and product text stay intact. */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  color-scheme:light;
+  --bg: #0f1115;
+  --bg2: #17181b;
+  --panel: #17181b;
+  --text: #fafaf8;
+  --muted: #c0c6d0;
+  --line: rgba(224, 217, 203, .23);
+  --gold: #d4a019;
+  --goldLight: #ffe0a0;
+  --silver: #c0c6d0;
+  --silverDark: #888f9a;
+  --pearl: #fafaf8;
+  --warm-gray: #e7e2dc;
+  --graphite: #0f1115;
+}
+
+html[dir="rtl"], html[dir="rtl"] body {font-family: "Vazirmatn", "Noto Sans Arabic", Tahoma, Arial, sans-serif;}
+html[dir="rtl"] .display,
+html[dir="rtl"] .principle h3,
+html[dir="rtl"] .process-step strong,
+html[dir="rtl"] .journey-stage h3,
+html[dir="rtl"] .risk-item summary strong {
+  font-family: "Vazirmatn", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: -.045em;
+  line-height: 1.44;
+}
+html[dir="rtl"] .hero-title{line-height:1.28;}
+html[dir="rtl"] .eyebrow,html[dir="rtl"] .overline,html[dir="rtl"] .section-topline {letter-spacing: 0;}
+html:not([dir="rtl"]) .display {font-family: "Baskerville", "Iowan Old Style", "Bodoni MT", Georgia, serif;letter-spacing:-.055em;}
+
+/* Uploaded emblem appears exactly as provided: no recreation or alternate mark. */
+.brand {font-family: Georgia, "Times New Roman", serif; letter-spacing:.12em; font-weight:400; color:var(--graphite);}
+.brand strong{font-weight:500;}
+.brand-mark-img {display:block;flex:0 0 auto;width:40px;height:40px;object-fit:cover;border-radius:50%;background:#fff;border:1px solid rgba(190,146,45,.35);box-shadow:0 3px 11px rgba(69,50,18,.14);}
+.brand-mark-img.mini {width:28px;height:28px;display:inline-block;vertical-align:middle;margin-inline-end:7px;}
+html[dir="rtl"] .brand strong {font-family:"Vazirmatn",Tahoma,sans-serif;letter-spacing:0;font-weight:700;}
+
+/* Pearl-white cinematic opening like the brand system: chromed logo and restrained gold. */
+.hero {
+  color:#151719;
+  background:
+    radial-gradient(ellipse at 76% 48%,rgba(223,184,110,.2) 0%,transparent 48%),
+    radial-gradient(ellipse at 17% 87%,rgba(198,201,208,.29) 0%,transparent 48%),
+    linear-gradient(145deg,#fff 0%,#fafaf8 51%,#efebe5 100%);
+}
+.hero:after {background:linear-gradient(90deg,rgba(255,255,255,.36),transparent 62%),linear-gradient(0deg,rgba(234,226,211,.25),transparent 17%);}
+.hero-ambient span {opacity:.12;filter:blur(86px)}
+.hero-ambient-a{background:#d4a019}
+.hero-ambient-b{background:#9ca5b4}
+.site-header {
+  background:linear-gradient(180deg,rgba(255,255,255,.93),rgba(255,255,255,.45));
+  border-bottom:1px solid rgba(31,33,35,.11);
+  backdrop-filter:blur(8px);
+}
+.top-nav a {color:#5b6068;}
+.top-nav a:hover{color:#9c6b20;}
+.brand-sup{color:#8f8e88;}
+.lang-switch,.audio-switch{background:rgba(255,255,255,.66);border-color:rgba(59,59,55,.18);color:#24262a;}
+.lang-switch span{color:#9e712b;}
+.header-studio,.pill-btn,.closing-cta {
+  background:linear-gradient(110deg,#8c5510,#d3a14a 45%,#ffe5a7 74%,#b87a20);
+  color:#151719;
+  border:1px solid rgba(177,123,32,.5);
+  border-radius:50px;
+  box-shadow:0 3px 13px rgba(171,115,26,.18),inset 0 1px 0 rgba(255,255,255,.55);
+}
+.header-studio:hover,.pill-btn:hover,.closing-cta:hover{background:linear-gradient(110deg,#a57523,#f9e0a1 60%,#c28b32)}
+.hero-content .overline,.hero-foot,.scroll-cue{color:#5c626b;}
+.hero-content .overline{font-weight:600;}
+.hero-t1,.hero-t2{color:#16191d;}
+.hero-t3 .amp{color:#6a6159;}
+.gold-ink{color:#b5842a;}
+.silver-ink{color:#858c96;}
+.hero-stop{color:#c08b28;}
+.hero-bottom>p{color:#5e6268;}
+.round-link{color:#242529;font-weight:700;}
+.round-icon{border-color:rgba(178,137,68,.65);color:#9e6920;background:rgba(255,255,255,.62);}
+.duality-object {opacity:1;filter:drop-shadow(0 27px 39px rgba(94,72,38,.18));}
+.duality-core image{filter:brightness(1.005) contrast(1.03)}
+.duality-orbits{opacity:.65;}
+.duality-labels{fill:#756e66;}
+.hero-foot{color:#696d73;}
+.scroll-cue i{border-color:#b38642;}
+.rail-dot{background:#fff;border-color:#b3a79a;}
+.rail-caption,.rail-end{color:#605e59;}
+
+/* Premium editorial rhythm; same section order and interaction markup. */
+.intro-statement,.philosophy-section,.dashboard-section,.risk-section{background:#fafaf8;}
+.metals-section,.strategy-section,.network-section,.distinction-section,.vision-section{background:#0f1115;}
+.relationship-section{background:linear-gradient(165deg,#fafaf8,#e7e2dc);color:#16181c;}
+.relationship-section .section-topline{color:#72706c;border-color:#c3bdb3;}
+.relationship-head>p{color:#62666b;}
+.ratio-lab{background:linear-gradient(145deg,#fff,#f5f2ed 70%);border:1px solid #ddd4c6;box-shadow:0 25px 65px #4a382314;color:#232426;border-radius:20px;overflow:hidden;}
+.ratio-lab .lab-top,.ratio-control{border-color:#ddd4c6;color:#646a70;}
+.ratio-center strong,.move-value{color:#17191c;}
+.ratio-center>small,.ratio-side .micro,.ratio-side>p,.ratio-feedback{color:#6c7077;}
+.ring-track,.ring-inner{stroke:#d6d0c7;}
+.bar-meta,.range-titles{color:#454a50;}
+.range-marks{color:#6f7379;}
+.ratio-control .outline-btn{color:#222; border-color:#cbbf9d;}
+.metal-card{border-color:#34302a;background:radial-gradient(ellipse at 45% 33%,#44301c 0%,#1b1a19 47%,#131313 100%);border-radius:16px;}
+.metal-silver{background:radial-gradient(ellipse at 48% 33%,#42444b 0%,#1a1c21 47%,#141517 100%);}
+.journey-section {background:linear-gradient(150deg,#171717,#232225 50%,#0f1115)}
+.custody-section{background:#fafaf8;color:#17191d;}
+.custody-section .section-topline{color:#76726b;border-color:#c7c1b6;}
+.custody-section .custody-layout>div:first-child>p:not(.eyebrow){color:#60666d;}
+.custody-section .outline-btn{color:#302b24;border-color:#c9ad81;}
+.custody-section .permission-note{background:#f0ece5;border-color:#dbcfb9;color:#24272c;}
+.custody-section .permission-note p{color:#51565d;}
+.custody-section .wallet-legend,.custody-section .wallet-caption{color:#656b74;}
+.mock-dashboard{border:1px solid #dfd9d0;background:#fff;color:#181a1d;box-shadow:0 30px 80px #4e4b4320;border-radius:20px;overflow:hidden;}
+.mock-top,.mock-summary,.mock-bottom{border-color:#dfd9d0;}
+.mock-pill{border-color:#e7decf;color:#7a5b27;}
+.mock-summary small{color:#686b71;}
+.mock-summary h3{color:#1b1b1c;}
+.mock-summary h3 b{color:#888b91;}
+.mock-meta{color:#535963;}
+.mock-panel{color:#35373a;}
+.mock-panel>div:not(.mock-note){border-color:#e5dfd6;}
+.mock-note,.mock-bottom{color:#74777c;}
+.mock-tabbar button{color:#707479;}
+.mock-tabbar button.is-active{color:#a06b18;}
+.mock-summary .mock-balance{background:#ddd5c7;}
+
+/* A bright final statement replaces only the original dark gradient behind the same copy. */
+.closing-section {color:#16181b;background:radial-gradient(ellipse at 50% 25%,#fff 2%,#fafaf8 45%,#e7e2dc 100%);}
+.closing-halo{border-color:#d4a01955;box-shadow:0 0 0 45px #b5aba010,0 0 0 95px #d4a01911;}
+.closing-logo{position:relative;z-index:2;display:block;width:clamp(110px,15vw,180px);height:auto;aspect-ratio:1;object-fit:cover;border-radius:50%;mix-blend-mode:multiply;filter:drop-shadow(0 15px 20px #77613b22);}
+.closing-title{margin:10px 0 25px;font-size:clamp(82px,13vw,240px);}
+.closing-title>span{background:linear-gradient(100deg,#5b3e19,#b47b23,#d5c5a2 52%,#737983 72%,#1b1b1d);color:transparent;background-clip:text;-webkit-background-clip:text;}
+.closing-title small{color:#655c4f;}
+.closing-text{color:#5c6168;}
+.closing-legal{color:#62676e;}
+.footer,.reference-links{color:#65676c;border-color:#d1c8b9;}
+.reference-links span{color:#9a7029;}
+.footer a:hover,.reference-links a:hover{color:#8d611c;}
+
+/* Interactive gallery remains a dark chapter; technology stays in code, not visible copy. */
+.studio-view{background:#0f1115;}
+.studio-modes button{border-radius:40px;}
+.studio-footer>span{color:#d9bd8c;letter-spacing:.15em;}
+
+@media(max-width:1100px){
+ .duality-object{opacity:.93;}
+}
+@media(max-width:780px){
+ .duality-object{opacity:.75;}
+ .brand-mark-img{width:33px;height:33px;}
+}
+@media(max-width:620px){
+ .hero{background:linear-gradient(165deg,#fff 0%,#fafaf8 65%,#efe9df);}
+ .hero:after{background:linear-gradient(0deg,rgba(250,250,248,.45),transparent 25%);}
+ .duality-object{opacity:.7;}
+ .hero-bottom>p,html[dir="rtl"] .hero-bottom>p{text-shadow:0 1px 12px #fff,0 1px 3px #fff;}
+ .hero-t1,.hero-t2,.hero-t3{text-shadow:0 1px 12px rgba(255,255,255,.6);}
+ .brand-mark-img{width:30px;height:30px;}
+ .closing-logo{width:112px;}
+ html[dir="rtl"] .hero-title{font-size:clamp(42px,10vw,70px);}
+}

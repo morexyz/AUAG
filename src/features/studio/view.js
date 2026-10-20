@@ -1,0 +1,1 @@
+export function createStudioView(){return {root:document.getElementById('studio-view'),stage:document.getElementById('studio-stage'),canvas:document.getElementById('studio-canvas'),modeButtons:[...document.querySelectorAll('[data-mode]')],intensity:document.getElementById('studio-intensity'),pause:document.getElementById('studio-pause')}};

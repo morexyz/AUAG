@@ -1,0 +1,10 @@
+@keyframes orbitspin{to{transform:rotate(360deg)}}@keyframes scrollCue{0%{transform:translateY(0);opacity:0}55%{opacity:1}100%{transform:translateY(10px);opacity:0}}@keyframes metalFloat{0%,100%{transform:translateY(0) rotate(-24deg) rotateY(-22deg) rotateX(17deg)}50%{transform:translateY(-19px) rotate(-17deg) rotateY(-12deg) rotateX(22deg)}}@keyframes haloBreath{50%{transform:translateX(-50%) rotate(48deg) scale(1.06);opacity:.5}}
+.intro-fade{opacity:1;transform:none}.js-enabled .intro-fade{opacity:0;transform:translateY(18px)}.js-enabled .intro-fade.is-intro{animation:introIn .95s cubic-bezier(.22,.8,.24,1) forwards}@keyframes introIn{to{opacity:1;transform:translateY(0)}}.metal-card:hover .metal-graphic-shape{filter:brightness(1.14)}.metal-card,.network-node{will-change:auto}.ratio-rings:hover .ring-inner{stroke:var(--gold)}.process-art.is-running .process-front{stroke-dasharray:0 1200}.process-step.is-highlight strong{color:var(--goldLight)}.process-step.is-highlight{transform:scale(1.06)}.wallet-svg #flow-token{filter:drop-shadow(0 0 10px #e4b874)}.wallet-svg #wallet-flow{animation:dashFlow 16s linear infinite}@keyframes dashFlow{to{stroke-dashoffset:-340}}
+html[dir=rtl] .hero-title>.hero-t1,html[dir=rtl] .hero-title>.hero-t2{text-align:right}html[dir=rtl] .hero-t3{white-space:normal}html[dir=rtl] .hero-content .overline{direction:rtl;text-align:right}html[dir=rtl] .hero-title .hero-t2{margin-right:1.5vw;margin-left:0}html[dir=rtl] .statement-last{font-size:.7em}
+/* Native scroll-driven decorative motion; IntersectionObserver/RAF remains fallback. */
+@supports (animation-timeline: view()){
+ @media (prefers-reduced-motion: no-preference){
+  .vision-deco{animation:visionScroll linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+  @keyframes visionScroll{from{transform:translateY(-49%) rotate(-17deg)}to{transform:translateY(-49%) rotate(19deg)}}
+ }
+}

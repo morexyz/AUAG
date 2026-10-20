@@ -1,0 +1,4 @@
+export function createRatioView(root=document){const $=id=>root.getElementById(id);return {
+ range:$('relative-range'),gold:$('gold-readout'),goldWeight:$('weight-gold'),silverWeight:$('weight-silver'),goldBar:$('balance-gold'),goldRing:$('ring-gold'),silverRing:$('ring-silver'),move:$('move-value'),output:$('range-output'),feedback:$('ratio-feedback'),demo:$('rebalance-btn'),reset:$('reset-ratio'),
+ render(w){this.gold.innerHTML=`${Math.round(w.gold)}<small>%</small>`;this.goldWeight.textContent=w.gold+'%';this.silverWeight.textContent=w.silver+'%';this.goldBar.style.width=w.gold+'%';this.goldRing.setAttribute('stroke-dasharray',`${w.gold} 100`);this.silverRing.setAttribute('stroke-dasharray',`${w.silver} 100`);this.silverRing.setAttribute('stroke-dashoffset',String(-w.gold));this.move.textContent=(w.move>0?'+':'')+w.move+'%';this.output.textContent=(w.move>0?'+':'')+w.move+'%'}
+}}
